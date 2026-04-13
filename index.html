@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwindcss-vite</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-[Poppins]">
+    <!-- header -->
+    <header class="fixed w-full z-20 top-0 start-0">
+      <!-- main navbar -->
+      <nav class="bg-neutral-primary">
+        <div
+          class="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto px-4 py-1.5"
+        >
+          <!-- search bar -->
+          <div>
+            <form>
+              <label
+                for="search"
+                class="block mb-2.5 text-sm font-medium text-heading sr-only"
+                >Search</label
+              >
+              <div class="relative">
+                <input
+                  type="search"
+                  id="search"
+                  class="block w-full p-3 ps-9 bg-neutral-secondary-medium border border-gray-300 text-heading text-sm rounded-base focus:ring-0 focus:ring-accent focus:border-accent shadow-xs placeholder:text-body"
+                  placeholder="Search..."
+                  required
+                />
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-body"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                      d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- logo -->
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="./src/assets/logo/logo.png"
+              class="h-[70px]"
+              alt="Logo"
+            />
+          </a>
+
+          <!-- login btn -->
+          <div class="flex items-center space-x-4 rtl:space-x-reverse">
+            <a
+              href="#"
+              class="text-[17px] font-medium text-accent hover:text-accent-hover hover:underline py-1 "
+              ><i class="fa-solid fa-heart"></i
+            ></a>
+            <a
+              href="#"
+              class="text-[17px] font-medium text-accent hover:text-accent-hover hover:underline py-1"
+              ><i class="fa-solid fa-cart-plus"></i
+            ></a>
+            <div>
+              <a
+              href="#"
+              class="text-base font-medium text-heading hover:text-secodary hover:bg-accent py-1 px-2.5 transition-all duration-200"
+              >Login</a
+            >
+            <a
+              href="#"
+              class="text-base font-medium text-heading hover:text-secodary hover:bg-accent py-1 px-2.5 transition-all duration-200 "
+              >Register</a
+            >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- sub navbar -->
+      <nav
+        class="bg-neutral-secondary-soft border-y border-border-color"
+      >
+        <div class="max-w-screen-xl mx-auto px-4 py-3">
+          <div class="flex items-center justify-center">
+            <ul
+              class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="text-base relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+                  aria-current="page"
+                  >HOME</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-base relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+                  >MEN</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-base relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+                  >WOMEN</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-base relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+                  >KIDS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-base relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+                  >ABOUT</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <main class="max-w-screen-xl mx-auto px-4"></main>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

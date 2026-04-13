@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+
+
+@theme{
+  --color-primary:  #111111;
+  --color-secodary: #F9F9F9;
+  --color-accent:  #C2A878;
+  --color-accent-hover: #A68B5B;
+  --color-text-description: #6B7280;
+  --color-border-color: #e5e7eb;
+}
