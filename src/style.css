@@ -4,6 +4,14 @@
 @source "../node_modules/flowbite";
 
 
+@layer components {
+  .center-page {
+    @apply max-w-screen-xl mx-auto px-4;
+  }
+  .section-padding {
+    @apply pt-[50px] md:pt-[90px];
+  }
+}
 
 @theme{
   --color-primary:  #111111;
@@ -13,6 +21,7 @@
   --color-text-description: #6B7280;
   --color-border-color: #e5e7eb;
 }
+
 
 /* a[aria-current="page"] {
   color: #A68B5B; 
