@@ -21,6 +21,14 @@
     />
   </head>
   <body class="font-[Poppins]">
+    <div id="navbar"></div>
 
+    <script type="module">
+      fetch("/src/components/navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
   </body>
 </html>

@@ -1,0 +1,129 @@
+<header class="fixed w-full z-20 top-0 start-0">
+  <!-- main navbar -->
+  <nav class="bg-neutral-primary">
+    <div
+      class="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto px-4 py-1.5"
+    >
+      <!-- search bar -->
+      <div>
+        <form>
+          <label
+            for="search"
+            class="block mb-2.5 text-sm font-medium text-heading sr-only"
+            >Search</label
+          >
+          <div class="relative">
+            <input
+              type="search"
+              id="search"
+              class="block w-full p-3 ps-9 bg-neutral-secondary-medium border border-accent text-heading text-sm rounded-base focus:ring-0 focus:ring-accent-hover focus:border-accent-hover shadow-xs placeholder:text-body"
+              placeholder="Search..."
+              required
+            />
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-body"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- logo -->
+      <a
+        href="index.html"
+        class="flex items-center space-x-3 rtl:space-x-reverse"
+      >
+        <img src="/src/assets/logo/logo.png" class="h-[70px]" alt="Logo" />
+      </a>
+
+      <!-- right-section (login btn...) -->
+      <div class="flex items-center space-x-4 rtl:space-x-reverse">
+        <a
+          href="/pages/wishlist.html"
+          class="text-[17px] font-medium text-accent hover:text-accent-hover hover:underline py-1"
+          ><i class="fa-solid fa-heart"></i
+        ></a>
+        <a
+          href="/pages/cart.html"
+          class="text-[17px] font-medium text-accent hover:text-accent-hover hover:underline py-1"
+          ><i class="fa-solid fa-cart-plus"></i
+        ></a>
+        <div>
+          <a
+            href="#"
+            class="text-base font-medium text-heading hover:text-secodary hover:bg-accent py-1 px-2.5 transition-all duration-200"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="text-base font-medium text-heading hover:text-secodary hover:bg-accent py-1 px-2.5 transition-all duration-200"
+            >Register</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- sub navbar -->
+  <nav class="bg-neutral-secondary-soft border-y border-border-color">
+    <div class="max-w-screen-xl mx-auto px-4 py-3">
+      <div class="flex items-center justify-center">
+        <ul
+          class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="text-base text-heading relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pages/men.html"
+              class="text-base text-heading relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+              >MEN</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pages/women.html"
+              class="text-base text-heading relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+              >WOMEN</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pages/kid.html"
+              class="text-base text-heading relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+              >KIDS</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pages/about.html"
+              class="text-base text-heading relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-hover hover:text-accent-hover transition-all after:transition-all after:duration-300 hover:after:w-full"
+              >ABOUT</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

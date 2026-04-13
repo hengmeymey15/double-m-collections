@@ -13,3 +13,12 @@
   --color-text-description: #6B7280;
   --color-border-color: #e5e7eb;
 }
+
+/* a[aria-current="page"] {
+  color: #A68B5B; 
+  font-weight: 600;
+}
+
+a[aria-current="page"]::after {
+  width: 100%;
+} */
