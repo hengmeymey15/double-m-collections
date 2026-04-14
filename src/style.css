@@ -9,7 +9,7 @@
     @apply max-w-screen-xl mx-auto px-4;
   }
   .section-padding {
-    @apply pt-[100px] md:pt-[110px];
+    @apply md:pt-[100px] pt-[90px];
   }
 }
 
