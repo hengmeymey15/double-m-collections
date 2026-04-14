@@ -343,115 +343,66 @@
             Discover premium styles at exclusive prices
           </p>
         </div>
+
         <!-- carts container -->
-        <div class="">
+        <div
+          class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
           <!-- cart -->
           <div
-            class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4"
+            class="rounded-base border border-border-color bg-white p-3 shadow-sm"
           >
-            <!-- all content in a cart -->
+            <!-- first row -->
+            <!-- item image -->
             <div
-              class="rounded-base border border-border-color bg-white p-3 shadow-sm"
+              class="relative h-[400px] w-full border-b border-b-border-color"
             >
-              <!-- first row -->
-              <!-- item image -->
-              <div
-                class="relative h-[400px] w-full border-b border-b-border-color bg-accent-hover"
-              >
-                <a href="/pages/product-detail.html">
-                  <img
-                    class="mx-auto h-full w-full object-cover"
-                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg"
-                    alt=""
-                  />
-                </a>
-                <!-- absolute discount label -->
-                <div class="absolute top-2 right-2">
-                  <span
-                    class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
-                  >
-                    50% OFF
-                  </span>
-                </div>
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/discount_products/dis-1.png"
+                  alt=""
+                />
+              </a>
+              <!-- absolute discount label -->
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                >
+                  50% OFF
+                </span>
               </div>
+            </div>
 
-              <!-- second row -->
-              <div class="pt-2">
-                <div class="mb-2 flex items-center justify-between gap-4">
-                  <!-- discount label -->
-                  <!-- <span
+            <!-- second row -->
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <!-- discount label -->
+                <!-- <span
                     class="me-2 rounded text-red-600 py-0.5 text-[14px] font-semibold"
                   >
                     Up to 35% off
                   </span> -->
 
-                  
-                  <!-- item name -->
-                  <a
-                    href="#"
-                    class="text-lg font-semibold leading-tight text-primary"
-                    >Cashmere Cardigan</a
-                  >
-
-                  <!-- add to favorite -->
-                  <div class="flex items-center justify-end gap-1">
-                    <button
-                      type="button"
-                      data-tooltip-target="tooltip-add-to-favorites"
-                      class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover"
-                    >
-                      <span class="sr-only"> Add to Favorites </span>
-                      <svg
-                        class="h-6 w-6"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
-                        />
-                      </svg>
-                    </button>
-                    <div
-                      id="tooltip-add-to-favorites"
-                      role="tooltip"
-                      class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
-                      data-popper-placement="top"
-                    >
-                      Add to favorites
-                      <div class="tooltip-arrow" data-popper-arrow=""></div>
-                    </div>
-                  </div>
-                </div>
-
                 <!-- item name -->
-                <!-- <a
-                  href="#"
-                  class="text-lg font-semibold leading-tight text-primary"
-                  >Cashmere Cardigan</a
-                > -->
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Men Lapel Short Sleeve </a
+                >
 
-                <!-- price section -->
-                <div class="mt-4 flex items-center justify-between gap-4">
-                  <p class="text-2xl font-semibold leading-tight text-primary">
-                    $15.10
-                  </p>
-
+                <!-- add to favorite -->
+                <div class="flex items-center justify-end gap-1">
                   <button
                     type="button"
-                    class="inline-flex items-center rounded-md px-5 py-2.5 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                    
+                    class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
                   >
+                    
                     <svg
-                      class="-ms-2 me-2 h-5 w-5"
+                      class="h-6 w-6"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
                       fill="none"
                       viewBox="0 0 24 24"
                     >
@@ -460,34 +411,396 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
+                        d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
                       />
                     </svg>
-                    Add to cart
                   </button>
+                  
                 </div>
+              </div>
+
+              <!-- item name -->
+              <!-- <a
+                  href="#"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Cashmere Cardigan</a
+                > -->
+
+              <!-- price section -->
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="md:text-[17px] text-[20px] font-semibold leading-tight text-primary text-red-600">
+                  $15.10 <del class="text-text-description font-medium">$30.20</del>
+                </p>
+
+                <button
+                  type="button"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                >
+                  <svg
+                    class="-ms-2 me-2 h-5 w-5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
+                    />
+                  </svg>
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- cart -->
+          <div
+            class="rounded-base border border-border-color bg-white p-3 shadow-sm"
+          >
+            <!-- first row -->
+            <!-- item image -->
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/discount_products/dis-2.png"
+                  alt=""
+                />
+              </a>
+              <!-- absolute discount label -->
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                >
+                  50% OFF
+                </span>
               </div>
             </div>
 
+            <!-- second row -->
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <!-- discount label -->
+                <!-- <span
+                    class="me-2 rounded text-red-600 py-0.5 text-[14px] font-semibold"
+                  >
+                    Up to 35% off
+                  </span> -->
+
+                <!-- item name -->
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Babydoll Blouse</a
+                >
+
+                <!-- add to favorite -->
+                <div class="flex items-center justify-end gap-1">
+                  <button
+                    type="button"
+                    class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                  >
+                    
+                    <svg
+                      class="h-6 w-6"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="tooltip-add-to-favorites"
+                    role="tooltip"
+                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                    data-popper-placement="top"
+                  >
+                    Add to favorites
+                    <div class="tooltip-arrow" data-popper-arrow=""></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item name -->
+              <!-- <a
+                  href="#"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Cashmere Cardigan</a
+                > -->
+
+              <!-- price section -->
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="md:text-[17px] text-[20px] font-semibold leading-tight text-primary text-red-600">
+                  $18.20 <del class="text-text-description font-medium">$36.40</del>
+                </p>
+
+                <button
+                  type="button"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                >
+                  <svg
+                    class="-ms-2 me-2 h-5 w-5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
+                    />
+                  </svg>
+                  Add to cart
+                </button>
+              </div>
+            </div>
           </div>
 
+          <!-- cart -->
+          <div
+            class="rounded-base border border-border-color bg-white p-3 shadow-sm"
+          >
+            <!-- first row -->
+            <!-- item image -->
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/discount_products/dis-3.png"
+                  alt=""
+                />
+              </a>
+              <!-- absolute discount label -->
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                >
+                  50% OFF
+                </span>
+              </div>
+            </div>
 
+            <!-- second row -->
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <!-- discount label -->
+                <!-- <span
+                    class="me-2 rounded text-red-600 py-0.5 text-[14px] font-semibold"
+                  >
+                    Up to 35% off
+                  </span> -->
 
-          
-          <!-- View more item button -->
-          <div class="w-full text-center">
-            <a href="/pages/products.html">
-              <button
-                type="button"
-                class="rounded-xs border border-gray-200 bg-transparent hover:bg-accent hover:text-white px-5 py-2.5 text-base font-medium text-primary transition-all duration-300 cursor-pointer"
-              >
-                View more items
-              </button>
-            </a>
+                <!-- item name -->
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Cargo Polo Set</a
+                >
+
+                <!-- add to favorite -->
+                <div class="flex items-center justify-end gap-1">
+                  <button
+                    type="button"
+                    class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                  >
+                    
+                    <svg
+                      class="h-6 w-6"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                      />
+                    </svg>
+                  </button>
+                  
+                </div>
+              </div>
+
+              <!-- item name -->
+              <!-- <a
+                  href="#"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Cashmere Cardigan</a
+                > -->
+
+              <!-- price section -->
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="md:text-[17px] text-[20px] font-semibold leading-tight text-primary text-red-600">
+                  $22.25 <del class="text-text-description font-medium">$44.50</del>
+                </p>
+
+                <button
+                  type="button"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                >
+                  <svg
+                    class="-ms-2 me-2 h-5 w-5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
+                    />
+                  </svg>
+                  Add to cart
+                </button>
+              </div>
+            </div>
           </div>
+
+          <!-- cart -->
+          <div
+            class="rounded-base border border-border-color bg-white p-3 shadow-sm"
+          >
+            <!-- first row -->
+            <!-- item image -->
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/discount_products/dis-4.png"
+                  alt=""
+                />
+              </a>
+              <!-- absolute discount label -->
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                >
+                  50% OFF
+                </span>
+              </div>
+            </div>
+
+            <!-- second row -->
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <!-- discount label -->
+                <!-- <span
+                    class="me-2 rounded text-red-600 py-0.5 text-[14px] font-semibold"
+                  >
+                    Up to 35% off
+                  </span> -->
+
+                <!-- item name -->
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Two-Piece Knit Set</a
+                >
+
+                <!-- add to favorite -->
+                <div class="flex items-center justify-end gap-1">
+                  <button
+                    type="button"
+                    class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                  >
+                    
+                    <svg
+                      class="h-6 w-6"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                      />
+                    </svg>
+                  </button>
+                  
+                </div>
+              </div>
+
+              <!-- item name -->
+              <!-- <a
+                  href="#"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Cashmere Cardigan</a
+                > -->
+
+              <!-- price section -->
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="md:text-[17px] text-[20px] font-semibold leading-tight text-primary text-red-600">
+                  $33.17 <del class="text-text-description font-medium">$65.35</del>
+                </p>
+
+                <button
+                  type="button"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                >
+                  <svg
+                    class="-ms-2 me-2 h-5 w-5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
+                    />
+                  </svg>
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </section>
+
     </main>
 
     <!-- footer (using component footer from the components folder)-->
