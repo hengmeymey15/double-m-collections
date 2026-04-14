@@ -21,15 +21,25 @@
     />
   </head>
   <body class="font-[Poppins]">
+    <!-- header (using component navbar from the components folder) -->
     <div id="navbar"></div>
 
-    <script type="module" src="/src/js/main.js"></script>
+    <!-- footer (using component footer from the components folder)-->
+    <div id="footer"></div>
 
     <script type="module">
       fetch("/src/components/navbar.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+    <!-- footer component script -->
+    <script type="module">
+      fetch("/src/components/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
         });
     </script>
   </body>
