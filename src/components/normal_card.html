@@ -1,0 +1,81 @@
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+  <!-- cart -->
+  <div class="rounded-base border border-border-color bg-white p-3 shadow-sm">
+    <!-- first row -->
+    <!-- item image -->
+    <div class="relative h-[400px] w-full border-b border-b-border-color">
+      <a href="/pages/product-detail.html">
+        <img
+          class="mx-auto h-full w-full object-cover"
+          src="/src/assets/products/new_arrivals/new-1.png"
+          alt=""
+        />
+      </a>
+    </div>
+
+    <!-- second row -->
+    <div class="pt-2">
+      <div class="mb-2 flex items-center justify-between gap-2">
+        <!-- item name -->
+        <a
+          href="/pages/product-detail.html"
+          class="text-lg font-semibold leading-tight text-primary"
+          >Shacket
+        </a>
+
+        <!-- add to favorite -->
+        <div class="flex items-center justify-end gap-1">
+          <button
+            type="button"
+            class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+          >
+            <svg
+              class="h-6 w-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- price section -->
+      <div class="mt-4 flex items-center justify-between gap-3">
+        <p class="text-xl font-semibold leading-tight text-primary">$18.10</p>
+
+        <button
+          type="button"
+          class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+        >
+          <svg
+            class="-ms-2 me-2 h-5 w-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
+            />
+          </svg>
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
