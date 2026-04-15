@@ -33,12 +33,15 @@
         </h1>
 
         <div class="flex flex-col lg:flex-row gap-8 items-start">
+          <!-- item (left section) -->
           <div class="flex-[2] w-full">
+            <!-- take card from dynamicallt -->
             <div
               id="cart-container"
               class="bg-white border border-border-color rounded-xl overflow-hidden"
             ></div>
 
+            <!-- incase there is no item to show -->
             <div
               id="empty-cart"
               class="hidden flex-col items-center justify-center py-20 bg-white border border-border-color rounded-xl text-center"
@@ -60,16 +63,17 @@
             </div>
           </div>
 
+          <!-- order summary (right-section)-->
           <div class="flex-1 w-full lg:sticky lg:top-24">
             <div
               class="bg-white border border-border-color rounded-xl p-6 mb-5"
             >
-              <h2 class="text-lg font-extrabold mb-5">Order Summary</h2>
+              <h2 class="text-lg font-extrabold mb-4">Order Summary</h2>
 
               <div class="summary-row">
                 <span>Subtotal</span> <span id="subtotal">$0.00</span>
               </div>
-              <div class="summary-row">
+              <div class="my-2 summary-row">
                 <span>Shipping</span> <span id="shipping">Free</span>
               </div>
               <div id="promo-row" class="summary-row hidden text-green-500">
@@ -80,14 +84,16 @@
                 <span>Total</span> <span id="total">$0.00</span>
               </div>
 
+              <!-- checkout button -->
               <button
-                class="w-full bg-primary text-white py-4 rounded-xl font-bold text-base mt-6 transition-opacity hover:opacity-90 flex items-center justify-center gap-2"
+                class="w-full bg-accent text-white py-4 rounded-xl font-bold text-base mt-4 transition-opacity hover:opacity-90 flex items-center justify-center gap-2"
                 onclick="handleCheckout()"
               >
                 Checkout <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
 
+            <!-- Promo code section -->
             <div class="bg-white border border-border-color rounded-xl p-5">
               <p class="text-[0.9rem] font-semibold mb-3">Promo Code</p>
               <div class="flex gap-2">
@@ -99,7 +105,7 @@
                 />
                 <button
                   onclick="applyPromo()"
-                  class="bg-white border border-primary text-primary px-4 rounded-lg font-bold text-[0.85rem] transition-colors hover:bg-primary hover:text-white"
+                  class="bg-white border border-accent text-primary px-4 rounded-lg font-bold text-[0.85rem] transition-colors hover:bg-accent hover:text-white"
                 >
                   Apply
                 </button>
@@ -140,168 +146,8 @@
         });
     </script>
 
-    <script>
-      let promoDiscount = 0;
+    <!-- cart script -->
+    <script src="/src/js/cart.js"></script>
 
-      function getCart() {
-        try {
-          return JSON.parse(localStorage.getItem("dm_cart") || "[]");
-        } catch {
-          return [];
-        }
-      }
-      function saveCart(c) {
-        localStorage.setItem("dm_cart", JSON.stringify(c));
-      }
-
-      function updateBadges() {
-        const cart = getCart();
-        const cc = document.getElementById("cart-count");
-        const wc = document.getElementById("wishlist-count");
-        if (cc) cc.textContent = cart.reduce((s, i) => s + i.qty, 0);
-        const w = JSON.parse(localStorage.getItem("dm_wishlist") || "[]");
-        if (wc) wc.textContent = w.length;
-      }
-
-      function showToast(msg) {
-        const t = document.getElementById("toast");
-        document.getElementById("toast-msg").textContent = msg;
-        t.classList.add("opacity-100", "translate-y-0");
-        t.classList.remove("opacity-0", "translate-y-[100px]");
-        setTimeout(() => {
-          t.classList.remove("opacity-100", "translate-y-0");
-          t.classList.add("opacity-0", "translate-y-[100px]");
-        }, 2500);
-      }
-
-      function renderCart() {
-        const cart = getCart();
-        const container = document.getElementById("cart-container");
-        const empty = document.getElementById("empty-cart");
-
-        if (cart.length === 0) {
-          container.classList.add("hidden");
-          empty.classList.replace("hidden", "flex");
-          updateSummary();
-          return;
-        }
-
-        container.classList.remove("hidden");
-        empty.classList.replace("flex", "hidden");
-
-        container.innerHTML = cart
-          .map(
-            (item, idx) => `
-          <div class="cart-item" id="item-${idx}">
-            <img src="${item.image}" class="w-24 h-28 object-cover rounded-lg border border-border-color" />
-            <div class="flex-1 flex flex-col">
-              <div class="flex justify-between mb-1">
-                <h3 class="font-bold text-primary text-[1.05rem] m-0">${item.name}</h3>
-                <button onclick="removeItem(${idx}, '${item.size}')" class="bg-transparent border-none text-gray-400 cursor-pointer hover:text-red-500 transition-colors"><i class="fa-regular fa-trash-can"></i></button>
-              </div>
-              <p class="text-text-description text-[0.85rem] mb-3">Size: <span class="text-primary font-medium uppercase">${item.size}</span></p>
-              
-              <div class="mt-auto flex justify-between items-center">
-                <div class="flex items-center gap-2">
-                  <button class="qty-btn" onclick="updateQty(${idx}, -1)"><i class="fa-solid fa-minus text-[0.7rem]"></i></button>
-                  <span class="w-8 text-center font-bold text-[0.95rem]">${item.qty}</span>
-                  <button class="qty-btn" onclick="updateQty(${idx}, 1)"><i class="fa-solid fa-plus text-[0.7rem]"></i></button>
-                </div>
-                <div class="flex flex-col items-end">
-                   <span class="font-extrabold text-primary">$${(item.price * item.qty).toFixed(2)}</span>
-                   <button onclick="saveToWishlist('${item.id}', '${item.size}')" class="bg-transparent border-none text-accent text-[0.75rem] font-medium cursor-pointer underline p-0 mt-1">Save for later</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        `,
-          )
-          .join("");
-
-        updateSummary();
-        updateBadges();
-      }
-
-      function updateQty(idx, delta) {
-        const cart = getCart();
-        cart[idx].qty += delta;
-        if (cart[idx].qty < 1) cart[idx].qty = 1;
-        saveCart(cart);
-        renderCart();
-      }
-
-      function removeItem(idx, size) {
-        const el = document.getElementById(`item-${idx}`);
-        el.classList.add("removing");
-        setTimeout(() => {
-          const cart = getCart();
-          cart.splice(idx, 1);
-          saveCart(cart);
-          renderCart();
-        }, 300);
-      }
-
-      function updateSummary() {
-        const cart = getCart();
-        const sub = cart.reduce((s, i) => s + i.price * i.qty, 0);
-        const total = Math.max(0, sub - promoDiscount);
-
-        document.getElementById("subtotal").textContent = `$${sub.toFixed(2)}`;
-        document.getElementById("total").textContent = `$${total.toFixed(2)}`;
-
-        const pr = document.getElementById("promo-row");
-        if (promoDiscount > 0) {
-          pr.classList.remove("hidden");
-          document.getElementById("discount").textContent =
-            `-$${promoDiscount.toFixed(2)}`;
-        } else {
-          pr.classList.add("hidden");
-        }
-      }
-
-      function saveToWishlist(id, size) {
-        const cart = getCart();
-        const item = cart.find((i) => i.id === id && i.size === size);
-        let w = JSON.parse(localStorage.getItem("dm_wishlist") || "[]");
-        if (!w.find((i) => i.id === id)) {
-          w.push({
-            id: item.id,
-            name: item.name,
-            price: item.price,
-            originalPrice: item.originalPrice,
-            image: item.image,
-          });
-          localStorage.setItem("dm_wishlist", JSON.stringify(w));
-        }
-        const idx = cart.findIndex((i) => i.id === id && i.size === size);
-        removeItem(idx, size);
-        showToast(`Saved to wishlist!`);
-      }
-
-      const VALID_PROMOS = { SAVE10: 10, DOUBLE20: 20, WELCOME5: 5 };
-      function applyPromo() {
-        const code = document
-          .getElementById("promo-input")
-          .value.trim()
-          .toUpperCase();
-        const msg = document.getElementById("promo-msg");
-        if (VALID_PROMOS[code]) {
-          promoDiscount = VALID_PROMOS[code];
-          msg.className = "text-[0.75rem] mt-2 text-green-500";
-          msg.textContent = `✓ Code "${code}" applied — $${promoDiscount.toFixed(2)} off!`;
-          updateSummary();
-          showToast(`Promo applied!`);
-        } else {
-          msg.className = "text-[0.75rem] mt-2 text-red-500";
-          msg.textContent = "Invalid code. Try: SAVE10, DOUBLE20";
-        }
-      }
-
-      function handleCheckout() {
-        showToast("Redirecting to checkout...");
-      }
-
-      renderCart();
-    </script>
   </body>
 </html>
