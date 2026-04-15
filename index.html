@@ -22,7 +22,9 @@
   </head>
   <body class="font-[Poppins]">
     <!-- header (using component navbar from the components folder) -->
-    <div id="navbar"></div>
+    <header>
+      <div id="navbar"></div>
+    </header>
 
     <!-- carousel-slide -->
     <section class="pt-[132px]">
@@ -190,7 +192,6 @@
                 alt=""
               />
             </div>
-
           </div>
           <div class="grid gap-4">
             <div>
@@ -207,7 +208,6 @@
                 alt=""
               />
             </div>
-
           </div>
           <div class="grid gap-4">
             <div>
@@ -224,7 +224,6 @@
                 alt=""
               />
             </div>
-
           </div>
           <div class="grid gap-4">
             <div>
@@ -389,45 +388,21 @@
                 </div>
               </div>
 
-              <!-- item name -->
-              <!-- <a
-                  href="#"
-                  class="text-lg font-semibold leading-tight text-primary"
-                  >Cashmere Cardigan</a
-                > -->
-
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
                 <p
-                  class="md:text-[17px] text-[20px] font-semibold leading-tight text-primary text-red-600"
+                  class="md:text-[17px] text-[20px] font-semibold leading-tight text-red-600"
                 >
                   $15.10
                   <del class="text-text-description font-medium">$30.20</del>
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -525,29 +500,12 @@
                   <del class="text-text-description font-medium">$36.40</del>
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -636,29 +594,12 @@
                   <del class="text-text-description font-medium">$44.50</del>
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -710,13 +651,18 @@
                 <div class="flex items-center justify-end gap-1">
                   <button
                     type="button"
-                    class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                    onclick="toggleWishlist(this)"
+                    data-id="DM-WOMEN-004"
+                    data-name="Two-Piece Knit Set"
+                    data-price="33.17"
+                    data-img="/src/assets/products/discount_products/dis-4.png"
+                    class="wishlist-btn p-2 text-primary rounded-base hover:bg-gray-200 transition-all duration-200"
                   >
                     <svg
-                      class="h-6 w-6"
+                      class="h-6 w-6 transition-all duration-200"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
+                      fill="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -747,34 +693,16 @@
                   <del class="text-text-description font-medium">$65.35</del>
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
         </div>
-
       </section>
 
       <!-- trending clothes -->
@@ -791,7 +719,6 @@
 
         <!-- carts container -->
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-
           <!-- cart -->
           <div
             class="rounded-base border border-border-color bg-white p-3 shadow-sm"
@@ -808,7 +735,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -848,36 +774,16 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $28.50
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -898,7 +804,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -938,40 +843,20 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $15.10
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
-          
+
           <!-- cart -->
           <div
             class="rounded-base border border-border-color bg-white p-3 shadow-sm"
@@ -988,7 +873,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1028,36 +912,16 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $40.90
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -1078,7 +942,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1118,43 +981,19 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $65.50
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
-
-
-
-
         </div>
       </section>
 
@@ -1172,7 +1011,6 @@
 
         <!-- carts container -->
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-
           <!-- cart -->
           <div
             class="rounded-base border border-border-color bg-white p-3 shadow-sm"
@@ -1189,7 +1027,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1229,36 +1066,16 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $18.10
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -1279,7 +1096,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1319,36 +1135,16 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $8.50
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -1369,7 +1165,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1409,36 +1204,16 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $19.20
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -1459,7 +1234,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1499,36 +1273,16 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $12.40
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -1549,7 +1303,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1559,7 +1312,7 @@
                 <a
                   href="/pages/product-detail.html"
                   class="text-lg font-semibold leading-tight text-primary"
-                  >Bolero Floral Dress 
+                  >Bolero Floral Dress
                 </a>
 
                 <!-- add to favorite -->
@@ -1589,36 +1342,16 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $20.10
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -1639,7 +1372,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1679,40 +1411,19 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $21.20
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
-
 
           <!-- cart -->
           <div
@@ -1730,7 +1441,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1770,36 +1480,16 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $24.50
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
@@ -1820,7 +1510,6 @@
                   alt=""
                 />
               </a>
-              
             </div>
 
             <!-- second row -->
@@ -1860,40 +1549,19 @@
 
               <!-- price section -->
               <div class="mt-4 flex items-center justify-between gap-3">
-                <p
-                  class="text-xl font-semibold leading-tight text-primary"
-                >
+                <p class="text-xl font-semibold leading-tight text-primary">
                   $26.15
-                  
                 </p>
 
-                <button
-                  type="button"
+                <a
+                  href="/pages/product-detail.html"
                   class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
                 >
-                  <svg
-                    class="-ms-2 me-2 h-5 w-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Add to cart
-                </button>
+                  View Detail
+                </a>
               </div>
             </div>
           </div>
-
         </div>
 
         <!-- View more item button -->
@@ -1908,11 +1576,13 @@
           </a>
         </div>
       </section>
-
+      
     </main>
 
     <!-- footer (using component footer from the components folder)-->
-    <div id="footer"></div>
+    <footer>
+      <div id="footer"></div>
+    </footer>
 
     <script type="module" src="/src/js/main.js"></script>
     <!-- navbar component script -->
@@ -1931,5 +1601,8 @@
           document.getElementById("footer").innerHTML = data;
         });
     </script>
+
+    <!-- add to cart script -->
+    <script type="module" src="/src/js/add-to-fav.js"></script>
   </body>
 </html>

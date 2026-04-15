@@ -22,11 +22,791 @@
   </head>
   <body class="font-[Poppins]">
     <!-- header (using component navbar from the components folder) -->
-    <div id="navbar"></div>
+    <header>
+      <div id="navbar"></div>
+    </header>
+
+    <main class="center-page md:pt-[132px]">
+      <section>
+        <!-- header -->
+        <!-- <div
+          class="flex items-center gap-1.5 mb-6 text-[0.85rem] text-text-description"
+        >
+          <a href="/" class="hover:text-accent">Home</a><span>›</span>
+          <a href="/pages/products.html" class="hover:text-accent">Men</a
+          ><span>›</span>
+          <span class="text-primary font-medium">Men Lapel Short Sleeve</span>
+        </div> -->
+
+        <!-- item-detail section -->
+        <div
+          class="pt-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+          id="product-grid"
+        >
+          <!-- item image (left section) -->
+          <div class="flex flex-col-reverse md:flex-row gap-4">
+            <!-- detail item image-->
+            <div
+              class="flex flex-row md:flex-col gap-2.5 overflow-x-auto"
+              id="thumb-strip"
+            >
+              <img
+                src="/src/assets/products/discount_products/dis-1.png"
+                class="w-[130px] h-[130px] object-cover rounded-md cursor-pointer border-2 border-transparent transition-colors thumb-active"
+                data-src="/src/assets/products/discount_products/dis-1.png"
+                alt="View 1"
+              />
+              <img
+                src="/src/assets/products/discount_products/dis-1.png"
+                class="w-[130px] h-[120px] object-cover rounded-md cursor-pointer border-2 border-transparent transition-colors"
+                data-src="/src/assets/products/discount_products/dis-1.png"
+                alt="View 2"
+              />
+              <img
+                src="/src/assets/products/discount_products/dis-1.png"
+                class="w-[130px] h-[120px] object-cover rounded-md cursor-pointer border-2 border-transparent transition-colors"
+                data-src="/src/assets/products/discount_products/dis-1.png"
+                alt="View 3"
+              />
+              <img
+                src="/src/assets/products/discount_products/dis-1.png"
+                class="w-[130px] h-[120px] object-cover rounded-md cursor-pointer border-2 border-transparent transition-colors"
+                data-src="/src/assets/products/discount_products/dis-1.png"
+                alt="View 4"
+              />
+            </div>
+
+            <!-- main item image-->
+            <div class="relative flex-1">
+              <img
+                id="main-product-img"
+                src="/src/assets/products/discount_products/dis-1.png"
+                class="w-full h-[320px] md:h-[520px] object-cover rounded-xl"
+                alt="Men Lapel Short Sleeve"
+              />
+              <!-- Hover to zoom -->
+              <!-- <div
+                class="absolute bottom-3 right-3 bg-black/45 text-white text-xs py-1 px-2.5 rounded-full pointer-events-none"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Hover to zoom
+              </div> -->
+              <div
+                class="absolute top-3.5 left-3.5 bg-red-500 text-white px-3 py-1 rounded font-bold text-[0.85rem]"
+              >
+                50% OFF
+              </div>
+            </div>
+          </div>
+
+          <!-- item info (right section) -->
+          <div>
+            <p
+              class="text-accent font-semibold text-[0.85rem] tracking-widest uppercase mb-2"
+            >
+              Men's Collection
+            </p>
+            <h1
+              class="text-[1.75rem] font-extrabold text-primary leading-tight mb-3"
+            >
+              Men Lapel Short Sleeve Shirt
+            </h1>
+
+            <!-- available or not -->
+            <div class="flex items-center gap-2.5 mb-4">
+              <div class="flex gap-0.5 text-accent text-[0.9rem]">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <span class="text-[0.85rem] text-text-description"
+                >4.5 (128 reviews)</span
+              >
+              <span class="w-px h-3.5 bg-border-color inline-block"></span>
+              <span class="text-[0.85rem] text-green-500 font-semibold"
+                ><i class="fa-solid fa-circle-check text-[0.7rem]"></i> In
+                Stock</span
+              >
+            </div>
+
+            <!-- price of items -->
+            <div class="mb-5">
+              <span class="text-[2rem] font-extrabold text-red-500"
+                >$15.10</span
+              >
+              <span
+                class="text-[1.1rem] text-text-description line-through ml-2.5"
+                >$30.20</span
+              >
+              <span
+                class="bg-red-50 text-red-500 text-[0.8rem] font-bold py-0.5 px-2.5 rounded ml-2.5"
+                >Save $15.10</span
+              >
+            </div>
+
+            <hr class="border-t border-border-color mb-5" />
+
+            <!-- color of items -->
+            <div class="mb-5">
+              <p class="text-[0.9rem] font-semibold mb-2.5">
+                Color:
+                <span
+                  id="selected-color"
+                  class="text-text-description font-normal"
+                  >Beige</span
+                >
+              </p>
+              <div class="flex gap-2.5">
+                <div
+                  class="color-dot active w-7 h-7 rounded-full cursor-pointer border-2 border-transparent outline outline-2 outline-transparent outline-offset-[3px] transition-all hover:scale-110 active bg-[#d4c5a9]"
+                  title="Beige"
+                  data-color="Beige"
+                ></div>
+                <div
+                  class="color-dot w-7 h-7 rounded-full cursor-pointer border-2 border-transparent outline outline-2 outline-transparent outline-offset-[3px] transition-all hover:scale-110 bg-[#4b5563]"
+                  title="Charcoal"
+                  data-color="Charcoal"
+                ></div>
+                <div
+                  class="color-dot w-7 h-7 rounded-full cursor-pointer border-2 border-transparent outline outline-2 outline-transparent outline-offset-[3px] transition-all hover:scale-110 bg-[#1e3a5f]"
+                  title="Navy"
+                  data-color="Navy"
+                ></div>
+                <div
+                  class="color-dot w-7 h-7 rounded-full cursor-pointer border-2 border-border-color outline outline-2 outline-transparent outline-offset-[3px] transition-all hover:scale-110 bg-white"
+                  title="White"
+                  data-color="White"
+                ></div>
+                <div
+                  class="color-dot w-7 h-7 rounded-full cursor-pointer border-2 border-transparent outline outline-2 outline-transparent outline-offset-[3px] transition-all hover:scale-110 bg-[#111]"
+                  title="Black"
+                  data-color="Black"
+                ></div>
+              </div>
+            </div>
+
+            <!-- size of items -->
+            <div class="mb-5">
+              <div class="flex items-center justify-between mb-2.5">
+                <p class="text-[0.9rem] font-semibold">
+                  Size:
+                  <span
+                    id="selected-size"
+                    class="text-text-description font-normal"
+                    >Select</span
+                  >
+                </p>
+                <a href="#" class="text-[0.8rem] text-accent underline"
+                  >Size Guide</a
+                >
+              </div>
+              <div class="flex gap-2 flex-wrap" id="size-selector">
+                <button
+                  class="w-11 h-11 border-[1.5px] border-border-color rounded-md text-[0.85rem] font-semibold cursor-not-allowed opacity-35 line-through bg-white"
+                  title="Out of stock"
+                >
+                  XS
+                </button>
+                <button
+                  class="size-btn w-11 h-11 border-[1.5px] border-border-color rounded-md text-[0.85rem] font-semibold cursor-pointer transition-all hover:border-accent hover:bg-accent hover:text-white bg-white"
+                >
+                  S
+                </button>
+                <button
+                  class="size-btn w-11 h-11 border-[1.5px] border-border-color rounded-md text-[0.85rem] font-semibold cursor-pointer transition-all hover:border-accent hover:bg-accent hover:text-white bg-white"
+                >
+                  M
+                </button>
+                <button
+                  class="size-btn w-11 h-11 border-[1.5px] border-border-color rounded-md text-[0.85rem] font-semibold cursor-pointer transition-all hover:border-accent hover:bg-accent hover:text-white bg-white"
+                >
+                  L
+                </button>
+                <button
+                  class="size-btn w-11 h-11 border-[1.5px] border-border-color rounded-md text-[0.85rem] font-semibold cursor-pointer transition-all hover:border-accent hover:bg-accent hover:text-white bg-white"
+                >
+                  XL
+                </button>
+                <button
+                  class="w-11 h-11 border-[1.5px] border-border-color rounded-md text-[0.85rem] font-semibold cursor-not-allowed opacity-35 line-through bg-white"
+                  title="Out of stock"
+                >
+                  XXL
+                </button>
+              </div>
+            </div>
+
+            <!-- quantity of items -->
+            <div class="mb-6">
+              <p class="text-[0.9rem] font-semibold mb-2.5">Quantity</p>
+
+              <div class="flex items-center gap-2.5">
+                <button
+                  class="w-9 h-9 border-[1.5px] border-border-color bg-white rounded-md text-lg cursor-pointer transition-colors hover:bg-gray-100 flex items-center justify-center"
+                  id="qty-minus"
+                >
+                  <i class="fa-solid fa-minus text-[0.75rem]"></i>
+                </button>
+
+                <input
+                  type="number"
+                  id="qty-input"
+                  value="1"
+                  min="1"
+                  max="10"
+                  readonly
+                  class="w-12 text-center border-[1.5px] border-border-color rounded-md text-base font-semibold py-1.5"
+                />
+
+                <button
+                  class="w-9 h-9 border-[1.5px] border-border-color bg-white rounded-md text-lg cursor-pointer transition-colors hover:bg-gray-100 flex items-center justify-center"
+                  id="qty-plus"
+                >
+                  <i class="fa-solid fa-plus text-[0.75rem]"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- add to cart -->
+            <div class="flex gap-3 mb-5">
+              <button
+                class="flex-1 flex items-center justify-center gap-2 bg-accent text-white rounded-lg py-3.5 px-7 text-base font-semibold cursor-pointer transition-all hover:bg-accent-hover active:scale-95"
+                id="add-to-cart-btn"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+              </button>
+              <button
+                class="flex items-center gap-2 bg-white text-primary border-[1.5px] border-border-color rounded-lg py-3.5 px-5 text-lg cursor-pointer transition-colors hover:border-red-500 hover:text-red-500"
+                id="wishlist-btn"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+
+            <!-- buy now btn -->
+            <!-- <button
+              class="w-full py-3.5 bg-primary text-white rounded-lg text-base font-semibold cursor-pointer transition-opacity hover:opacity-85"
+            >
+              <i class="fa-solid fa-bolt"></i> Buy Now
+            </button> -->
+
+            <hr class="border-t border-border-color my-5" />
+
+            <!-- shipping -->
+            <div class="grid grid-cols-2 gap-3">
+              <div
+                class="flex items-center gap-2 text-[0.82rem] text-text-description"
+              >
+                <i class="fa-solid fa-truck text-accent w-4"></i> Free shipping
+                over $50
+              </div>
+              <div
+                class="flex items-center gap-2 text-[0.82rem] text-text-description"
+              >
+                <i class="fa-solid fa-rotate-left text-accent w-4"></i> 30-day
+                free returns
+              </div>
+              <div
+                class="flex items-center gap-2 text-[0.82rem] text-text-description"
+              >
+                <i class="fa-solid fa-shield-halved text-accent w-4"></i> Secure
+                checkout
+              </div>
+              <div
+                class="flex items-center gap-2 text-[0.82rem] text-text-description"
+              >
+                <i class="fa-regular fa-clock text-accent w-4"></i> Ships in 2–4
+                days
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- description for item-->
+        <div
+          class="mt-[60px] bg-white border border-border-color rounded-xl overflow-hidden"
+        >
+          <div class="border-b border-border-color flex">
+            <button
+              class="tab-btn py-2.5 px-5 text-[0.9rem] font-semibold cursor-pointer border-b-2 border-transparent text-text-description transition-all active tab-active"
+              data-tab="description"
+            >
+              Description
+            </button>
+            <button
+              class="tab-btn py-2.5 px-5 text-[0.9rem] font-semibold cursor-pointer border-b-2 border-transparent text-text-description transition-all"
+              data-tab="details"
+            >
+              Details & Care
+            </button>
+            <button
+              class="tab-btn py-2.5 px-5 text-[0.9rem] font-semibold cursor-pointer border-b-2 border-transparent text-text-description transition-all"
+              data-tab="reviews"
+            >
+              Reviews (128)
+            </button>
+            <button
+              class="tab-btn py-2.5 px-5 text-[0.9rem] font-semibold cursor-pointer border-b-2 border-transparent text-text-description transition-all"
+              data-tab="shipping"
+            >
+              Shipping
+            </button>
+          </div>
+
+          <div class="p-7">
+            <div id="tab-description" class="tab-content active block">
+              <p class="text-text-description leading-[1.8] mb-3.5">
+                Elevate your everyday style with the Men Lapel Short Sleeve
+                Shirt. Crafted from a premium breathable cotton blend, this
+                shirt offers a modern relaxed fit that transitions effortlessly
+                from casual outings to semi-formal settings.
+              </p>
+              <ul class="text-text-description leading-[2] pl-5 list-disc">
+                <li>Modern lapel collar with button placket</li>
+                <li>Breathable cotton-linen blend fabric</li>
+                <li>Relaxed fit — true to size</li>
+                <li>Two chest button pockets</li>
+                <li>Available in 5 colors</li>
+              </ul>
+            </div>
+            <div id="tab-details" class="tab-content hidden">
+              <div class="grid grid-cols-2 gap-3 max-w-[500px]">
+                <div class="text-[0.9rem] text-text-description">Material</div>
+                <div class="text-[0.9rem] font-medium">
+                  55% Cotton, 45% Linen
+                </div>
+                <div class="text-[0.9rem] text-text-description">Fit</div>
+                <div class="text-[0.9rem] font-medium">Relaxed</div>
+                <div class="text-[0.9rem] text-text-description">Care</div>
+                <div class="text-[0.9rem] font-medium">
+                  Machine wash cold, tumble dry low
+                </div>
+                <div class="text-[0.9rem] text-text-description">Origin</div>
+                <div class="text-[0.9rem] font-medium">Made in Portugal</div>
+                <div class="text-[0.9rem] text-text-description">SKU</div>
+                <div class="text-[0.9rem] font-medium">DM-MEN-001-BEI</div>
+              </div>
+            </div>
+            <div id="tab-reviews" class="tab-content hidden">
+              <div
+                class="flex gap-10 items-center mb-7 pb-6 border-b border-border-color"
+              >
+                <div class="text-center">
+                  <div class="text-[3.5rem] font-extrabold text-primary">
+                    4.5
+                  </div>
+                  <div class="text-accent text-[0.9rem] mb-1">
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <div class="text-[0.8rem] text-text-description">
+                    128 reviews
+                  </div>
+                </div>
+                <div class="flex-1 space-y-1.5">
+                  <div class="flex items-center gap-2.5">
+                    <span class="text-[0.8rem] w-4">5</span>
+                    <div
+                      class="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden"
+                    >
+                      <div class="w-[70%] h-full bg-accent rounded-full"></div>
+                    </div>
+                    <span class="text-[0.8rem] text-text-description">70%</span>
+                  </div>
+                  <div class="flex items-center gap-2.5">
+                    <span class="text-[0.8rem] w-4">4</span>
+                    <div
+                      class="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden"
+                    >
+                      <div class="w-[20%] h-full bg-accent rounded-full"></div>
+                    </div>
+                    <span class="text-[0.8rem] text-text-description">20%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-5">
+                <div class="pb-5 border-b border-border-color">
+                  <div class="flex justify-between mb-1.5 text-[0.9rem]">
+                    <span class="font-semibold"
+                      >Alex M.
+                      <span
+                        class="text-text-description font-normal text-[0.8rem] ml-2"
+                        >Verified Purchase</span
+                      ></span
+                    >
+                    <span class="text-[0.8rem] text-text-description"
+                      >March 2025</span
+                    >
+                  </div>
+                  <p class="text-[0.9rem] text-text-description leading-[1.7]">
+                    Great quality shirt! The fabric is super breathable and the
+                    fit is perfect.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="tab-shipping" class="tab-content hidden">
+              <div class="flex flex-col gap-4">
+                <div class="flex gap-3.5 items-start">
+                  <i
+                    class="fa-solid fa-truck text-accent text-[1.2rem] mt-0.5 w-5"
+                  ></i>
+                  <div>
+                    <p class="font-semibold mb-1 text-[0.9rem]">
+                      Standard Shipping
+                    </p>
+                    <p class="text-text-description text-[0.85rem]">
+                      Free on orders over $50. Estimated 5–7 business days.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-3.5 items-start">
+                  <i
+                    class="fa-solid fa-rotate-left text-accent text-[1.2rem] mt-0.5 w-5"
+                  ></i>
+                  <div>
+                    <p class="font-semibold mb-1 text-[0.9rem]">
+                      Returns & Exchanges
+                    </p>
+                    <p class="text-text-description text-[0.85rem]">
+                      Free returns within 30 days.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Another related item card-->
+        <div class="mt-[60px]">
+          <h2 class="text-2xl font-extrabold mb-6">You May Also Like</h2>
+          <!-- card container -->
+          <!-- <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+            <div
+              class="bg-white border border-border-color rounded-xl overflow-hidden transition-all hover:shadow-md hover:-translate-y-1"
+            >
+              <img
+                src="/src/assets/products/new_arrivals/new-1.png"
+                class="w-full h-60 object-cover"
+              />
+              <div class="p-3.5">
+                <p class="font-semibold text-[0.9rem] text-primary mb-1.5">
+                  Casual Linen Shirt
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-red-500">$22.00</span>
+                  <button
+                    onclick="addToCart('Casual Linen Shirt', 22.0)"
+                    class="bg-accent text-white rounded-md py-1.5 px-3.5 text-[0.8rem] font-semibold cursor-pointer"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          
+          <!-- carts container -->
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- cart -->
+            <div
+              class="rounded-base border border-border-color bg-white p-3 shadow-sm overflow-hidden transition-all hover:shadow-md hover:-translate-y-1"
+            >
+              <!-- first row -->
+              <!-- item image -->
+              <div
+                class="relative h-[400px] w-full border-b border-b-border-color"
+              >
+                <a href="/pages/product-detail.html">
+                  <img
+                    class="mx-auto h-full w-full object-cover"
+                    src="/src/assets/products/trendings/trending-1.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <!-- second row -->
+              <div class="pt-2">
+                <div class="mb-2 flex items-center justify-between gap-2">
+                  <!-- item name -->
+                  <a
+                    href="/pages/product-detail.html"
+                    class="text-lg font-semibold leading-tight text-primary"
+                    >Soft Neutral Outfit
+                  </a>
+
+                  <!-- add to favorite -->
+                  <div class="flex items-center justify-end gap-1">
+                    <button
+                      type="button"
+                      class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                    >
+                      <svg
+                        class="h-6 w-6"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- price section -->
+                <div class="mt-4 flex items-center justify-between gap-3">
+                  <p class="text-xl font-semibold leading-tight text-primary">
+                    $28.50
+                  </p>
+
+                  <a
+                    href="/pages/product-detail.html"
+                    class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >
+                    View Detail
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- cart -->
+            <div
+              class="rounded-base border border-border-color bg-white p-3 shadow-sm overflow-hidden transition-all hover:shadow-md hover:-translate-y-1"
+            >
+              <!-- first row -->
+              <!-- item image -->
+              <div
+                class="relative h-[400px] w-full border-b border-b-border-color"
+              >
+                <a href="/pages/product-detail.html">
+                  <img
+                    class="mx-auto h-full w-full object-cover"
+                    src="/src/assets/products/trendings/trending-2.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <!-- second row -->
+              <div class="pt-2">
+                <div class="mb-2 flex items-center justify-between gap-2">
+                  <!-- item name -->
+                  <a
+                    href="/pages/product-detail.html"
+                    class="text-lg font-semibold leading-tight text-primary"
+                    >Leather Jacket
+                  </a>
+
+                  <!-- add to favorite -->
+                  <div class="flex items-center justify-end gap-1">
+                    <button
+                      type="button"
+                      class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                    >
+                      <svg
+                        class="h-6 w-6"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- price section -->
+                <div class="mt-4 flex items-center justify-between gap-3">
+                  <p class="text-xl font-semibold leading-tight text-primary">
+                    $15.10
+                  </p>
+
+                  <a
+                    href="/pages/product-detail.html"
+                    class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >
+                    View Detail
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- cart -->
+            <div
+              class="rounded-base border border-border-color bg-white p-3 shadow-sm overflow-hidden transition-all hover:shadow-md hover:-translate-y-1"
+            >
+              <!-- first row -->
+              <!-- item image -->
+              <div
+                class="relative h-[400px] w-full border-b border-b-border-color"
+              >
+                <a href="/pages/product-detail.html">
+                  <img
+                    class="mx-auto h-full w-full object-cover"
+                    src="/src/assets/products/trendings/trending-3.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <!-- second row -->
+              <div class="pt-2">
+                <div class="mb-2 flex items-center justify-between gap-2">
+                  <!-- item name -->
+                  <a
+                    href="/pages/product-detail.html"
+                    class="text-lg font-semibold leading-tight text-primary"
+                    >Black Utility Shacket
+                  </a>
+
+                  <!-- add to favorite -->
+                  <div class="flex items-center justify-end gap-1">
+                    <button
+                      type="button"
+                      class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                    >
+                      <svg
+                        class="h-6 w-6"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- price section -->
+                <div class="mt-4 flex items-center justify-between gap-3">
+                  <p class="text-xl font-semibold leading-tight text-primary">
+                    $40.90
+                  </p>
+
+                  <a
+                    href="/pages/product-detail.html"
+                    class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >
+                    View Detail
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- cart -->
+            <div
+              class="rounded-base border border-border-color bg-white p-3 shadow-sm overflow-hidden transition-all hover:shadow-md hover:-translate-y-1"
+            >
+              <!-- first row -->
+              <!-- item image -->
+              <div
+                class="relative h-[400px] w-full border-b border-b-border-color"
+              >
+                <a href="/pages/product-detail.html">
+                  <img
+                    class="mx-auto h-full w-full object-cover"
+                    src="/src/assets/products/trendings/trending-4.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <!-- second row -->
+              <div class="pt-2">
+                <div class="mb-2 flex items-center justify-between gap-2">
+                  <!-- item name -->
+                  <a
+                    href="/pages/product-detail.html"
+                    class="text-lg font-semibold leading-tight text-primary"
+                    >Nylon Shorts Set
+                  </a>
+
+                  <!-- add to favorite -->
+                  <div class="flex items-center justify-end gap-1">
+                    <button
+                      type="button"
+                      class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                    >
+                      <svg
+                        class="h-6 w-6"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- price section -->
+                <div class="mt-4 flex items-center justify-between gap-3">
+                  <p class="text-xl font-semibold leading-tight text-primary">
+                    $65.50
+                  </p>
+
+                  <a
+                    href="/pages/product-detail.html"
+                    class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >
+                    View Detail
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <div
+      id="toast"
+      class="fixed bottom-7 left-1/2 -translate-x-1/2 translate-y-[100px] bg-primary text-white py-3.5 px-7 rounded-lg text-[0.9rem] font-medium z-[9999] opacity-0 flex items-center gap-2.5 min-w-[240px]"
+    >
+      <i class="fa-solid fa-circle-check text-accent text-lg"></i>
+      <span id="toast-msg">Added to cart!</span>
+    </div>
 
     <!-- footer (using component footer from the components folder)-->
-    <div id="footer"></div>
+    <footer>
+      <div id="footer"></div>
+    </footer>
 
+    <!-- navbar component script -->
     <script type="module">
       fetch("/src/components/navbar.html")
         .then((res) => res.text())
@@ -42,5 +822,8 @@
           document.getElementById("footer").innerHTML = data;
         });
     </script>
+
+    <!-- product-detail script -->
+    <script type="module" src="/src/js/product-detail.js"></script>
   </body>
 </html>

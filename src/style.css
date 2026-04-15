@@ -22,6 +22,16 @@
   --color-border-color: #e5e7eb;
 }
 
+@layer utilities {
+    /* When active, the SVG fill becomes red and the stroke matches */
+    .is-favorite svg {
+      fill: #ef4444 !important; /* Tailwind red-500 */
+      stroke: #ef4444 !important;
+    }
+    .is-favorite {
+      @apply text-red-500;
+    }
+}
 
 /* a[aria-current="page"] {
   color: #A68B5B; 
