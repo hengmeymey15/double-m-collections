@@ -22,10 +22,1167 @@
   </head>
   <body class="font-[Poppins]">
     <!-- header (using component navbar from the components folder) -->
-    <div id="navbar"></div>
+    <header>
+      <div id="navbar"></div>
+    </header>
+
+    <!-- men page banner -->
+    <section class="md:pt-[132px]">
+      <img
+        class="w-full h-[450px] object-cover"
+        src="/src/assets/products/men_page/men-page-banner.png"
+        alt="banner for men page"
+      />
+    </section>
+
+    <main class="center-page">
+      <!-- men clothes categories -->
+      <section class="section-padding">
+        <!-- Page heading + breadcrumb -->
+        <!-- <div class="page-heading">
+          <p class="breadcrumb">
+            <a href="/index.html">Home</a>
+            <span>/</span>
+            <a href="/pages/products-all.html">All Products</a>
+            <span>/</span>
+            Men
+          </p>
+          <h1>Men's Collection</h1>
+        </div> -->
+
+        <!-- Category filter bar -->
+        <div class="category-bar" id="categoryBar">
+          <button
+            class="cat-btn active"
+            data-cat="all"
+            onclick="filterProducts(this, 'all')"
+          >
+            All <span class="count-badge" id="count-all">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="shirts"
+            onclick="filterProducts(this, 'shirts')"
+          >
+            Shirts <span class="count-badge" id="count-shirts">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="pants"
+            onclick="filterProducts(this, 'pants')"
+          >
+            Pants <span class="count-badge" id="count-pants">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="jeans"
+            onclick="filterProducts(this, 'jeans')"
+          >
+            Jeans <span class="count-badge" id="count-jeans">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="sets"
+            onclick="filterProducts(this, 'sets')"
+          >
+            Sets &amp; Outfits
+            <span class="count-badge" id="count-sets">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="sale"
+            onclick="filterProducts(this, 'sale')"
+          >
+            On Sale<span class="count-badge" id="count-sale">0</span>
+          </button>
+        </div>
+
+        <!-- Results info bar -->
+        <div class="results-bar">
+          <p id="resultsText">Showing all items</p>
+        </div>
+
+        <!-- Product grid -->
+        <div
+          class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+          id="productGrid"
+        >
+          <!-- ── SHIRTS ────────────────────────────────── -->
+
+          <!-- Shacket -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="shirts"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-15.png"
+                  alt="Shacket"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >High-Rise Pleated</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-SHK-001')"
+                  data-id="DM-MEN-SHK-001"
+                  data-name="Shacket"
+                  data-price="18.10"
+                  data-originalprice="18.10"
+                  data-image="/src/assets/products/new_arrivals/new-1.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $25.10
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Oxford Shirt -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="shirts"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-3.png"
+                  alt="Oxford Shirt"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Oxford Shirt</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-OXF-001')"
+                  data-id="DM-MEN-OXF-001"
+                  data-name="Oxford Shirt"
+                  data-price="19.20"
+                  data-originalprice="19.20"
+                  data-image="/src/assets/products/new_arrivals/new-3.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $19.20
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Linen Short-Sleeve -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="shirts"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-4.png"
+                  alt="Linen Short-Sleeve"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Linen Short-Sleeve</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-LIN-001')"
+                  data-id="DM-MEN-LIN-001"
+                  data-name="Linen Short-Sleeve"
+                  data-price="12.40"
+                  data-originalprice="12.40"
+                  data-image="/src/assets/products/new_arrivals/new-4.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $12.40
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Black Utility Shacket -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="shirts"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/trendings/trending-3.png"
+                  alt="Black Utility Shacket"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Black Utility Shacket</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-BUS-001')"
+                  data-id="DM-MEN-BUS-001"
+                  data-name="Black Utility Shacket"
+                  data-price="40.90"
+                  data-originalprice="40.90"
+                  data-image="/src/assets/products/trendings/trending-3.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $40.90
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Men Lapel Short Sleeve (SALE) -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="shirts"
+            data-sale="true"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/discount_products/dis-1.png"
+                  alt="Men Lapel Short Sleeve"
+                />
+              </a>
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                  >50% OFF</span
+                >
+              </div>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Men Lapel Short Sleeve</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-001')"
+                  data-id="DM-MEN-001"
+                  data-name="Men Lapel Short Sleeve"
+                  data-price="15.10"
+                  data-originalprice="30.20"
+                  data-image="/src/assets/products/discount_products/dis-1.png"
+                  data-badge="50% OFF"
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p
+                  class="md:text-[17px] text-[20px] font-semibold leading-tight text-red-600"
+                >
+                  $15.10
+                  <del class="text-text-description font-medium">$30.20</del>
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Long-Sleeve Overshirt -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="shirts"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-13.png"
+                  alt="Long-Sleeve Overshirt"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Long-Sleeve Overshirt</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-LSO-001')"
+                  data-id="DM-MEN-LSO-001"
+                  data-name="Long-Sleeve Overshirt"
+                  data-price="25.60"
+                  data-originalprice="25.60"
+                  data-image="/src/assets/products/new_arrivals/new-13.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $25.60
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- ── PANTS ────────────────────────────────── -->
+
+          <!-- Damen-Plisseehose -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="pants"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/pants/pant-1.png"
+                  alt="Damen-Plisseehose"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Damen-Plisseehose</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-DPH-001')"
+                  data-id="DM-MEN-DPH-001"
+                  data-name="Damen-Plisseehose"
+                  data-price="15.50"
+                  data-originalprice="15.50"
+                  data-image="/src/assets/products/pants/pant-1.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $15.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Pleated High Waist -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="pants"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/pants/pant-2.png"
+                  alt="Pleated High Waist"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Pleated High Waist</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-PHW-001')"
+                  data-id="DM-MEN-PHW-001"
+                  data-name="Pleated High Waist"
+                  data-price="12.50"
+                  data-originalprice="12.50"
+                  data-image="/src/assets/products/pants/pant-2.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $12.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Chuan Straight Leg (SALE) -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="pants"
+            data-sale="true"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/pants/pant-3.png"
+                  alt="Chuan Straight Leg"
+                />
+              </a>
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                  >50% OFF</span
+                >
+              </div>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Chuan Straight Leg</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-CSL-001')"
+                  data-id="DM-MEN-CSL-001"
+                  data-name="Chuan Straight Leg"
+                  data-price="15.00"
+                  data-originalprice="30.00"
+                  data-image="/src/assets/products/pants/pant-3.png"
+                  data-badge="50% OFF"
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p
+                  class="md:text-[17px] text-[20px] font-semibold leading-tight text-red-600"
+                >
+                  $15.00
+                  <del class="text-text-description font-medium">$30.00</del>
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- ── JEANS ────────────────────────────────── -->
+
+          <!-- Straight Leg Jeans -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="jeans"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/pants/pant-4.png"
+                  alt="Straight Leg Jeans"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Straight Leg Jeans</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-SLJ-001')"
+                  data-id="DM-MEN-SLJ-001"
+                  data-name="Straight Leg Jeans"
+                  data-price="18.50"
+                  data-originalprice="18.50"
+                  data-image="/src/assets/products/pants/pant-4.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $18.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Ice Blue Jeans -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="jeans"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/pants/pant-5.png"
+                  alt="Ice Blue Jeans"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Ice Blue Jeans</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-IBJ-001')"
+                  data-id="DM-MEN-IBJ-001"
+                  data-name="Ice Blue Jeans"
+                  data-price="20.20"
+                  data-originalprice="20.20"
+                  data-image="/src/assets/products/pants/pant-5.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $20.20
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Flare Jeans -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="jeans"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/pants/pant-6.png"
+                  alt="Flare Jeans"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Flare Jeans</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-FLJ-001')"
+                  data-id="DM-MEN-FLJ-001"
+                  data-name="Flare Jeans"
+                  data-price="14.90"
+                  data-originalprice="14.90"
+                  data-image="/src/assets/products/pants/pant-6.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $14.90
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- ── SETS & OUTFITS ────────────────────────── -->
+
+          <!-- Cargo Polo Set (SALE) -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="sets"
+            data-sale="true"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/discount_products/dis-3.png"
+                  alt="Cargo Polo Set"
+                />
+              </a>
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                  >50% OFF</span
+                >
+              </div>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Cargo Polo Set</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-CPS-001')"
+                  data-id="DM-MEN-CPS-001"
+                  data-name="Cargo Polo Set"
+                  data-price="22.25"
+                  data-originalprice="44.50"
+                  data-image="/src/assets/products/discount_products/dis-3.png"
+                  data-badge="50% OFF"
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p
+                  class="md:text-[17px] text-[20px] font-semibold leading-tight text-red-600"
+                >
+                  $22.25
+                  <del class="text-text-description font-medium">$44.50</del>
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Streetwear Lounge Set -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="sets"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-9.png"
+                  alt="Streetwear Lounge Set"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Streetwear Lounge Set</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-SLS-001')"
+                  data-id="DM-MEN-SLS-001"
+                  data-name="Streetwear Lounge Set"
+                  data-price="60.50"
+                  data-originalprice="60.50"
+                  data-image="/src/assets/products/new_arrivals/new-9.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $60.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Nylon Shorts Set -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="sets"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/trendings/trending-4.png"
+                  alt="Nylon Shorts Set"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Nylon Shorts Set</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-NSS-001')"
+                  data-id="DM-MEN-NSS-001"
+                  data-name="Nylon Shorts Set"
+                  data-price="65.50"
+                  data-originalprice="65.50"
+                  data-image="/src/assets/products/trendings/trending-4.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $65.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Mandarin Collar Set -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="sets"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-7.png"
+                  alt="Mandarin Collar Set"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Mandarin Collar Set</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-MEN-MCS-001')"
+                  data-id="DM-MEN-MCS-001"
+                  data-name="Mandarin Collar Set"
+                  data-price="24.50"
+                  data-originalprice="24.50"
+                  data-image="/src/assets/products/new_arrivals/new-7.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $24.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- Empty state (shown when no results) -->
+        <div class="empty-state" id="emptyState">
+          <i class="fa-regular fa-face-sad-tear"></i>
+          <p>No products found in this category.</p>
+        </div>
+      </section>
+      
+    </main>
 
     <!-- footer (using component footer from the components folder)-->
-    <div id="footer"></div>
+    <footer>
+      <div id="footer"></div>
+    </footer>
 
     <script type="module">
       fetch("/src/components/navbar.html")
@@ -42,5 +1199,10 @@
           document.getElementById("footer").innerHTML = data;
         });
     </script>
+
+    <!-- add to favorite -->
+    <script src="/src/js/add-to-fav.js"></script>
+    <!-- men script -->
+    <script src="/src/js/men.js"></script>
   </body>
 </html>
