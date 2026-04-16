@@ -1,3 +1,4 @@
+
 const DEMO_ITEMS = [
   {
     id: "DM-MEN-001",
@@ -282,3 +283,4 @@ document.getElementById("add-all-btn").addEventListener("click", () => {
 });
 
 renderWishlist();
+

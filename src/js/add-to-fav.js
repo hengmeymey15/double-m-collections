@@ -1,36 +1,32 @@
+// Load wishlist from localStorage on page load
+const wishlist = new Set(JSON.parse(localStorage.getItem('wishlist') || '[]'));
 
-function toggleWishlist(btn) {
-    const product = {
-        id: btn.getAttribute('data-id'),
-        name: btn.getAttribute('data-name'),
-        price: parseFloat(btn.getAttribute('data-price')),
-        image: btn.getAttribute('data-img')
-    };
+// Restore heart states on page load
+document.querySelectorAll('[data-id]').forEach(btn => {
+  if (wishlist.has(Number(btn.dataset.id))) {
+    setActive(btn, true);
+  }
+});
 
-    let wishlist = JSON.parse(localStorage.getItem('dm_wishlist') || '[]');
-    const index = wishlist.findIndex(item => item.id === product.id);
-
-    if (index === -1) {
-        wishlist.push(product);
-        btn.classList.add('is-favorite');
-    } else {
-        wishlist.splice(index, 1);
-        btn.classList.remove('is-favorite');
-    }
-
-    localStorage.setItem('dm_wishlist', JSON.stringify(wishlist));
-    
-    // Update navbar count if the function exists
-    if (window.updateBadges) updateBadges();
+function toggleWishlist(btn, id) {
+  if (wishlist.has(id)) {
+    wishlist.delete(id);
+    setActive(btn, false);
+  } else {
+    wishlist.add(id);
+    setActive(btn, true);
+  }
+  // Save to localStorage so wishlist page can read it
+  localStorage.setItem('wishlist', JSON.stringify([...wishlist]));
 }
 
-// Sync heart colors when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    const wishlist = JSON.parse(localStorage.getItem('dm_wishlist') || '[]');
-    document.querySelectorAll('.wishlist-btn').forEach(btn => {
-        const id = btn.getAttribute('data-id');
-        if (wishlist.some(item => item.id === id)) {
-            btn.classList.add('is-favorite');
-        }
-    });
-});
+function setActive(btn, active) {
+  const path = btn.querySelector('path');
+  if (active) {
+    path.setAttribute('fill', '#dc2626');
+    path.setAttribute('stroke', '#dc2626');
+  } else {
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke', 'currentColor');
+  }
+}
