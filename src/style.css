@@ -11,13 +11,23 @@
     @apply md:pt-[100px] pt-[90px];
   }
 
+  .hero-bg {
+    background: linear-gradient(135deg, #111 0%, #333 100%);
+  }
+  .stat-card:hover {
+    transform: translateY(-4px);
+  }
+  .team-card:hover .team-overlay {
+    opacity: 1;
+  }
+  /* -=---- */
+
   /* men style component */
   .category-bar {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     padding: 0 0 8px;
-    
   }
 
   .cat-btn {
