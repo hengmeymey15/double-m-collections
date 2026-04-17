@@ -22,10 +22,1049 @@
   </head>
   <body class="font-[Poppins]">
     <!-- header (using component navbar from the components folder) -->
-    <div id="navbar"></div>
+    <header>
+      <div id="navbar"></div>
+    </header>
+
+    <!-- women banner-section -->
+    <section class="md:pt-[132px]">
+      <img
+        class="w-full h-[450px] object-cover"
+        src="/src/assets/products/women_page/women-page-banner.png"
+        alt="banner for women page"
+      />
+    </section>
+
+    <main class="center-page">
+      <section class="section-padding">
+        <!-- women's collection -->
+        <!-- <div class="page-heading">
+          <p class="breadcrumb">
+            <a href="/index.html">Home</a>
+            <span>/</span>
+            <a href="/pages/products-all.html">All Products</a>
+            <span>/</span>
+            Women
+          </p>
+          <h1>Women's Collection</h1>
+        </div> -->
+
+        <!-- categories in women page -->
+        <div class="category-bar" id="categoryBar">
+          <button
+            class="cat-btn active"
+            data-cat="all"
+            onclick="filterProducts(this, 'all')"
+          >
+            All <span class="count-badge" id="count-all">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="dresses"
+            onclick="filterProducts(this, 'dresses')"
+          >
+            Dresses <span class="count-badge" id="count-dresses">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="tops"
+            onclick="filterProducts(this, 'tops')"
+          >
+            Tops &amp; Blouses
+            <span class="count-badge" id="count-tops">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="sets"
+            onclick="filterProducts(this, 'sets')"
+          >
+            Sets &amp; Outfits
+            <span class="count-badge" id="count-sets">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="pants"
+            onclick="filterProducts(this, 'pants')"
+          >
+            Pants <span class="count-badge" id="count-pants">0</span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="sale"
+            onclick="filterProducts(this, 'sale')"
+          >
+            On Sale<span class="count-badge" id="count-sale">0</span>
+          </button>
+        </div>
+
+        <!-- Show count item label -->
+        <div class="results-bar">
+          <p id="resultsText">Showing all items</p>
+        </div>
+
+        <div
+          class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+          id="productGrid"
+        >
+          <!-- ── DRESSES ──────────────────────────────── -->
+
+          <!-- Bolero Floral Dress -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="dresses"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-5.png"
+                  alt="Bolero Floral Dress"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Bolero Floral Dress</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-BFD-001')"
+                  data-id="DM-WOM-BFD-001"
+                  data-name="Bolero Floral Dress"
+                  data-price="20.10"
+                  data-originalprice="20.10"
+                  data-image="/src/assets/products/new_arrivals/new-5.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $20.10
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Blue Denim Dress -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="dresses"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-8.png"
+                  alt="Blue Denim Dress"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Blue Denim Dress</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-BDD-001')"
+                  data-id="DM-WOM-BDD-001"
+                  data-name="Blue Denim Dress"
+                  data-price="26.15"
+                  data-originalprice="26.15"
+                  data-image="/src/assets/products/new_arrivals/new-8.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $26.15
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Surplice V-Neck -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="dresses"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-14.png"
+                  alt="Surplice V-Neck"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Surplice V-Neck</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-SVN-001')"
+                  data-id="DM-WOM-SVN-001"
+                  data-name="Surplice V-Neck"
+                  data-price="19.50"
+                  data-originalprice="19.50"
+                  data-image="/src/assets/products/new_arrivals/new-14.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $19.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- ── TOPS & BLOUSES ──────────────────────── -->
+
+          <!-- Babydoll Blouse (SALE) -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="tops"
+            data-sale="true"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/discount_products/dis-2.png"
+                  alt="Babydoll Blouse"
+                />
+              </a>
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                  >50% OFF</span
+                >
+              </div>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Babydoll Blouse</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-BBL-001')"
+                  data-id="DM-WOM-BBL-001"
+                  data-name="Babydoll Blouse"
+                  data-price="18.20"
+                  data-originalprice="36.40"
+                  data-image="/src/assets/products/discount_products/dis-2.png"
+                  data-badge="50% OFF"
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p
+                  class="md:text-[17px] text-[20px] font-semibold leading-tight text-red-600"
+                >
+                  $18.20
+                  <del class="text-text-description font-medium">$36.40</del>
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- White & Pink Polo Shirt -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="tops"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-2.png"
+                  alt="White & Pink Polo Shirt"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >White &amp; Pink Polo Shirt</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-WPP-001')"
+                  data-id="DM-WOM-WPP-001"
+                  data-name="White & Pink Polo Shirt"
+                  data-price="8.50"
+                  data-originalprice="8.50"
+                  data-image="/src/assets/products/new_arrivals/new-2.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $8.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Grey and White Stripes -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="tops"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-6.png"
+                  alt="Grey and White Stripes"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Grey and White Stripes</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-GWS-001')"
+                  data-id="DM-WOM-GWS-001"
+                  data-name="Grey and White Stripes"
+                  data-price="21.20"
+                  data-originalprice="21.20"
+                  data-image="/src/assets/products/new_arrivals/new-6.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $21.20
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Peplum Blouse -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="tops"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-12.png"
+                  alt="Peplum Blouse"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Peplum Blouse</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-PBL-001')"
+                  data-id="DM-WOM-PBL-001"
+                  data-name="Peplum Blouse"
+                  data-price="12.00"
+                  data-originalprice="12.00"
+                  data-image="/src/assets/products/new_arrivals/new-12.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $12.00
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Floral Puff-Sleeve (SALE) -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="tops"
+            data-sale="true"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/discount_products/dis-5.png"
+                  alt="Floral Puff-Sleeve"
+                />
+              </a>
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                  >50% OFF</span
+                >
+              </div>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Floral Puff-Sleeve</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-FPS-001')"
+                  data-id="DM-WOM-FPS-001"
+                  data-name="Floral Puff-Sleeve"
+                  data-price="6.25"
+                  data-originalprice="12.50"
+                  data-image="/src/assets/products/discount_products/dis-5.png"
+                  data-badge="50% OFF"
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p
+                  class="md:text-[17px] text-[20px] font-semibold leading-tight text-red-600"
+                >
+                  $6.25
+                  <del class="text-text-description font-medium">$12.50</del>
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Mandarin Collar Linen (SALE) -->
+          <!-- <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="tops"
+            data-sale="true"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/new_arrivals/new-11.png"
+                  alt="Mandarin Collar Linen"
+                />
+              </a>
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                  >50% OFF</span
+                >
+              </div>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Mandarin Collar Linen</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-MCL-001')"
+                  data-id="DM-WOM-MCL-001"
+                  data-name="Mandarin Collar Linen"
+                  data-price="13.25"
+                  data-originalprice="26.50"
+                  data-image="/src/assets/products/new_arrivals/new-11.png"
+                  data-badge="50% OFF"
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p
+                  class="md:text-[17px] text-[20px] font-semibold leading-tight text-red-600"
+                >
+                  $13.25
+                  <del class="text-text-description font-medium">$26.50</del>
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- ── SETS & OUTFITS ──────────────────────── -->
+
+          <!-- Soft Neutral Outfit -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="sets"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/trendings/trending-1.png"
+                  alt="Soft Neutral Outfit"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Soft Neutral Outfit</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-SNO-001')"
+                  data-id="DM-WOM-SNO-001"
+                  data-name="Soft Neutral Outfit"
+                  data-price="28.50"
+                  data-originalprice="28.50"
+                  data-image="/src/assets/products/trendings/trending-1.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $28.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Two-Piece Knit Set (SALE) -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="sets"
+            data-sale="true"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/discount_products/dis-4.png"
+                  alt="Two-Piece Knit Set"
+                />
+              </a>
+              <div class="absolute top-2 right-2">
+                <span
+                  class="rounded-xs bg-red-600 text-white py-1 px-2 text-[14px] font-semibold"
+                  >50% OFF</span
+                >
+              </div>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="md:text-[17px] text-lg font-semibold leading-tight text-primary"
+                  >Two-Piece Knit Set</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-TPK-001')"
+                  data-id="DM-WOM-TPK-001"
+                  data-name="Two-Piece Knit Set"
+                  data-price="33.17"
+                  data-originalprice="65.35"
+                  data-image="/src/assets/products/discount_products/dis-4.png"
+                  data-badge="50% OFF"
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p
+                  class="md:text-[17px] text-[20px] font-semibold leading-tight text-red-600"
+                >
+                  $33.17
+                  <del class="text-text-description font-medium">$65.35</del>
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- ── PANTS ──────────────────────────────── -->
+
+          <!-- Straight Leg Jeans (women) -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="pants"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/pants/pant-4.png"
+                  alt="Straight Leg Jeans"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Straight Leg Jeans</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-SLJ-001')"
+                  data-id="DM-WOM-SLJ-001"
+                  data-name="Straight Leg Jeans"
+                  data-price="18.50"
+                  data-originalprice="18.50"
+                  data-image="/src/assets/products/pants/pant-4.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $18.50
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Flare Jeans (women) -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="pants"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/pants/pant-6.png"
+                  alt="Flare Jeans"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Flare Jeans</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-FLJ-001')"
+                  data-id="DM-WOM-FLJ-001"
+                  data-name="Flare Jeans"
+                  data-price="14.90"
+                  data-originalprice="14.90"
+                  data-image="/src/assets/products/pants/pant-6.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $14.90
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Ice Blue Jeans (women) -->
+          <div
+            class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
+            data-cat="pants"
+          >
+            <div
+              class="relative h-[400px] w-full border-b border-b-border-color"
+            >
+              <a href="/pages/product-detail.html">
+                <img
+                  class="mx-auto h-full w-full object-cover"
+                  src="/src/assets/products/pants/pant-5.png"
+                  alt="Ice Blue Jeans"
+                />
+              </a>
+            </div>
+            <div class="pt-2">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <a
+                  href="/pages/product-detail.html"
+                  class="text-lg font-semibold leading-tight text-primary"
+                  >Ice Blue Jeans</a
+                >
+                <button
+                  type="button"
+                  onclick="toggleWishlist(this, 'DM-WOM-IBJ-001')"
+                  data-id="DM-WOM-IBJ-001"
+                  data-name="Ice Blue Jeans"
+                  data-price="20.20"
+                  data-originalprice="20.20"
+                  data-image="/src/assets/products/pants/pant-5.png"
+                  data-badge=""
+                  class="p-2 text-primary rounded-base hover:bg-gray-200 hover:text-accent-hover transition-all duration-200"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <p class="text-xl font-semibold leading-tight text-primary">
+                  $20.20
+                </p>
+                <a
+                  href="/pages/product-detail.html"
+                  class="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-4 focus:ring-accent transition-all duration-200 cursor-pointer"
+                  >View Detail</a
+                >
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="empty-state" id="emptyState">
+          <i class="fa-regular fa-face-sad-tear"></i>
+          <p>No products found in this category.</p>
+        </div>
+      </section>
+    </main>
 
     <!-- footer (using component footer from the components folder)-->
-    <div id="footer"></div>
+    <footer>
+      <div id="footer"></div>
+    </footer>
 
     <script type="module">
       fetch("/src/components/navbar.html")
@@ -42,5 +1081,10 @@
           document.getElementById("footer").innerHTML = data;
         });
     </script>
+
+    <!-- add to cart script -->
+    <script src="/src/js/add-to-fav.js"></script>
+    <!-- take javascript script from men.js -->
+    <script src="/src/js/men.js"></script>
   </body>
 </html>
