@@ -130,11 +130,31 @@
       <div id="footer"></div>
     </footer>
 
+    <!-- navbar component script -->
     <script type="module">
       fetch("/src/components/navbar.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
+
+          const links = document.querySelectorAll(".nav-link");
+          const currentPath = window.location.pathname;
+
+          links.forEach((link) => {
+            const linkPath = link.getAttribute("href");
+
+            if (
+              (currentPath === "/" && linkPath === "/index.html") ||
+              currentPath.endsWith(linkPath)
+            ) {
+              link.classList.add(
+                "text-[var(--color-accent-hover)]",
+                "!text-[var(--color-accent-hover)]",
+                "after:w-full",
+                "font-semibold",
+              );
+            }
+          });
         });
     </script>
     <!-- footer component script -->
@@ -148,6 +168,5 @@
 
     <!-- cart script -->
     <script src="/src/js/cart.js"></script>
-
   </body>
 </html>

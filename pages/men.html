@@ -1041,7 +1041,6 @@
             </div>
           </div> -->
 
-
           <!-- Mandarin Collar Set -->
           <!-- <div
             class="product-card rounded-base border border-border-color bg-white p-3 shadow-sm"
@@ -1113,7 +1112,6 @@
           <p>No products found in this category.</p>
         </div>
       </section>
-      
     </main>
 
     <!-- footer (using component footer from the components folder)-->
@@ -1121,13 +1119,34 @@
       <div id="footer"></div>
     </footer>
 
+    <!-- navbar component script -->
     <script type="module">
       fetch("/src/components/navbar.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
+
+          const links = document.querySelectorAll(".nav-link");
+          const currentPath = window.location.pathname;
+
+          links.forEach((link) => {
+            const linkPath = link.getAttribute("href");
+
+            if (
+              (currentPath === "/" && linkPath === "/index.html") ||
+              currentPath.endsWith(linkPath)
+            ) {
+              link.classList.add(
+                "text-[var(--color-accent-hover)]",
+                "!text-[var(--color-accent-hover)]",
+                "after:w-full",
+                "font-semibold",
+              );
+            }
+          });
         });
     </script>
+
     <!-- footer component script -->
     <script type="module">
       fetch("/src/components/footer.html")

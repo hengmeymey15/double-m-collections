@@ -29,7 +29,10 @@
     <main class="center-page md:pt-[132px]">
       <section>
         <!-- show wishist items (if we have)-->
-        <div id="wishlist-header" class="mb-8 flex items-center justify-between flex-wrap gap-3">
+        <div
+          id="wishlist-header"
+          class="mb-8 flex items-center justify-between flex-wrap gap-3"
+        >
           <div>
             <h1 class="text-[1.75rem] font-extrabold text-primary m-0">
               My Wishlist
@@ -71,7 +74,6 @@
             <i class="fa-solid fa-arrow-left mr-2"></i>Continue Shopping
           </a>
         </div>
-        
       </section>
     </main>
 
@@ -88,11 +90,31 @@
       <div id="footer"></div>
     </footer>
 
+    <!-- navbar component script -->
     <script type="module">
       fetch("/src/components/navbar.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
+
+          const links = document.querySelectorAll(".nav-link");
+          const currentPath = window.location.pathname;
+
+          links.forEach((link) => {
+            const linkPath = link.getAttribute("href");
+
+            if (
+              (currentPath === "/" && linkPath === "/index.html") ||
+              currentPath.endsWith(linkPath)
+            ) {
+              link.classList.add(
+                "text-[var(--color-accent-hover)]",
+                "!text-[var(--color-accent-hover)]",
+                "after:w-full",
+                "font-semibold",
+              );
+            }
+          });
         });
     </script>
 
